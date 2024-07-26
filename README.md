@@ -8,13 +8,13 @@ python learn_wvf.py
 
 To infer transition probabilities using the learned world value function, run:
 ```
-python learn_wvf.py
+python wvf_dynamics.py
 ```
 <img src="transitions_neightbourhood.png"  alt="inferred transitions" width = 25% height = auto >
 
 To plan using the inferred transition probabilities, run:
 ```
-python learn_wvf.py
+python wvf_planning.py
 ```
 <img src="imagined_trajectories.png"  alt="inferred trajectories" width = 25% height = auto >
 
