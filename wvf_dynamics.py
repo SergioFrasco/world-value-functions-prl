@@ -26,5 +26,5 @@ for state in states:
     env.state = state
     inferred_dynamics = WVF_Ta(WVF, state, R=env.get_rewards(), goals=goals, actions = 5)
     env.render(fig=fig, ax=ax, Ta=inferred_dynamics)
-fig.savefig("transitions_neightbourhood.pdf", bbox_inches='tight')
+fig.savefig("transitions_neightbourhood.png", bbox_inches='tight')
 plt.show()
