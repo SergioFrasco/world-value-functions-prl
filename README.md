@@ -4,22 +4,21 @@ To learn a world value function, run:
 ```
 python learn_wvf.py
 ```
-<embed src="task_wvf.pdff" width="500" height="375" type="application/pdf">
+<img src="task_1_reward.png"  alt="task reward" width = 25% height = auto > <img src="task_wvf.png"  alt="world value function" width = 25% height = auto > <img src="task_vf.png"  alt="inferred value function" width = 25% height = auto >
 
 To infer transition probabilities using the learned world value function, run:
 ```
 python learn_wvf.py
 ```
-<embed src="task_wvf.pdff" width="500" height="375" type="application/pdf">
+<img src="transitions_neightbourhood.png"  alt="inferred transitions" width = 25% height = auto >
 
 To plan using the inferred transition probabilities, run:
 ```
 python learn_wvf.py
 ```
-<embed src="task_wvf.pdff" width="500" height="375" type="application/pdf">
+<img src="imagined_trajectories.png"  alt="inferred trajectories" width = 25% height = auto >
 
-
-**Reproduce Experiments from Paper:** To reproduce an experiment from the paper, run:
+To reproduce an experiment from the paper, run:
 ```
 python exp.py
 ```
