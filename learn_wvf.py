@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 # Environment
 goals = [(3,3)] # Task goals
-env = GridWorld(goals=goals)
+env = GridWorld(goals=goals, goal_reward=3)
 fig = env.render(R=env.get_rewards())
-fig.savefig("task_1_reward.pdf", bbox_inches='tight')
+fig.savefig("task_1_reward.png", bbox_inches='tight')
 plt.show()
 
 ### Learning world value function
@@ -22,12 +22,12 @@ save_WVF(WVF,"WVF")
 
 ### Plotting value function 
 fig=env.render( P=WVF_P(WVF), V = WVF_V(WVF))
-fig.savefig("task_vf.pdf", bbox_inches='tight')
+fig.savefig("task_vf.png", bbox_inches='tight')
 plt.show()
 plt.plot(stats1["R"])
 plt.show()
 
 ### Plotting world value function
 fig=env.render(WVF=WVF)
-fig.savefig("task_wvf.pdf", bbox_inches='tight')
+fig.savefig("task_wvf.png", bbox_inches='tight')
 plt.show()

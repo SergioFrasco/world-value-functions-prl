@@ -24,7 +24,7 @@ ax = fig.gca()
 for state in states:
     goals = env.get_neightbours(state)
     env.state = state
-    inferred_dynamics = WVF_Ta(WVF, state, goals, actions = 5)
+    inferred_dynamics = WVF_Ta(WVF, state, R=env.get_rewards(), goals=goals, actions = 5)
     env.render(fig=fig, ax=ax, Ta=inferred_dynamics)
 fig.savefig("transitions_neightbourhood.pdf", bbox_inches='tight')
 plt.show()

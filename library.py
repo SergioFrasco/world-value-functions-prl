@@ -627,10 +627,10 @@ def WVF_T(WVF_, state, action, R=None, goals=None, rmin_=-100, gamma=1, amax=Fal
         T = {goals[i]:P[i] for i in range(len(goals))}
     return T
 
-def WVF_Ta(WVF, state, goals=None, gamma=1, actions = 5):
+def WVF_Ta(WVF, state, R=None, goals=None, gamma=1, actions = 5):
     Ta = defaultdict(lambda: np.zeros(actions))
     for action in range(actions):
-        probs = WVF_T(WVF, state, action, goals=goals, gamma=gamma, amax=True)
+        probs = WVF_T(WVF, state, action, R=R, goals=goals, gamma=gamma, amax=True)
         for s,prob in probs.items():
             Ta[s][action] = prob
     return Ta

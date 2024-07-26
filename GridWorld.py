@@ -173,7 +173,7 @@ class GridWorld(gym.Env):
         for position in self.possibleStates: 
             state = position
             for action in range(self.action_space.n):
-                R[(state)][action] = self._get_reward(state,action)
+                R[state][action] = self._get_reward(state,action)
         return R
 
     def reset(self):

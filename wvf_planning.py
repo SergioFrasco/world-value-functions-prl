@@ -40,5 +40,5 @@ for (x,y) in states:
             if prob==1:
                 state = s
                 break
-fig.savefig("imagined_trajectories.pdf", bbox_inches='tight')
+fig.savefig("imagined_trajectories.png", bbox_inches='tight')
 plt.show()
