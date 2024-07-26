@@ -543,6 +543,18 @@ def WVF_Q(WVF, goal=None, actions = 5):
             Q[state] = np.max(Vs,axis=0)
     return Q
 
+def WVF_R_WVF(WVF, R, actions = 5):
+    WVF_ = defaultdict(lambda: defaultdict(lambda: np.zeros(actions)))
+    VF = defaultdict(lambda: 0)
+    P = defaultdict(lambda: 0)
+    for s in WVF.keys(WVF):
+        Vs = []
+        for g in WVF[s].keys():
+            wvf = WVF[s][g] + (R[g].max()-WVF[g][g].max())
+            WVF_[s][g] = wvf
+            Vs.append(wvf.max())
+        VF[s] = np.max(Vs)
+    return WVF_, VF, P
 
 def WVF_R_approx(WVF, env, gamma=1, actions = 5):
     R = {}
