@@ -9,7 +9,7 @@ python learn_wvf.py
 
 To infer the world value function of a new task using the learned world value function, run:
 ```
-python learn_wvf.py
+python wvf_inferring.py
 ```
 Task: Navigate to the hallways.
 
